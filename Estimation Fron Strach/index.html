@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet"  href="style.css">
+    <script src="javascript.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/boostrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7HnUhCSJ2_PiHAuMjjiZN6ZaIJ0KeGZA&libraries=places"></script>
+</head>
+<body onload="initMap()" >
+    <h1>Directions Route Map</h1>
+    
+    <div class="container">
+        <div class="form-group">
+            <input type="text" class="'form-control" placeholder="Source Location" id="source">
+        </div>
+        <br>
+        <div class="form-group">
+            <input type="text" class="'form-control" placeholder="Destination Location" id="dest">
+        </div><br>
+        <button onclick="calcRoute()" class="btn btn-primary">Get Directions</button>
+    </div>
+    <div id="map"></div>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7HnUhCSJ2_PiHAuMjjiZN6ZaIJ0KeGZA&callback=initMap&v=weekly&libraries=places"
+      defer
+    ></script>
+</body>
+</html>
